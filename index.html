@@ -9,19 +9,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Rajneel Anuraj</title>
     <style>
+        :root {
+            --start: 0%;
+            --finish: 100%;
+        }
         body {
             font-family: 'Montserrat', sans-serif;
             max-width: 70%;
             margin: auto;
             padding: 5%;
         }
-        /* footer {
-            position: absolute;
-            bottom: 5%;
-        } */
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 5% 0%;
+        }
         a:link, a:visited, a:hover, a:active {
             color: hotpink;
             text-decoration: none;
+        }
+        .typewriter #heading {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 50% auto auto auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+            typing-forward 3.5s steps(40, end),
+            /* typing-backward 3.5s steps(40, end), */
+            blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing-forward {
+          from { width: 0% }
+          to { width: 100% }
+        }
+
+        /* @keyframes typing-backward {
+          from { width: 100% }
+          to { width: 0% }
+        } */
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: orange; }
         }
     </style>
 </head>
@@ -36,33 +72,13 @@
 </script>
 <body>
     <center>
-        <h1>hi there! nice to see ya.</h1>
+        <div class="typewriter">
+            <h1 id="heading">work in progress...</h1>
+        </div>
         <br><br>
-        <p>
-            welcome to my little corner of the internet. <strong>*finger guns* <em>pew pew</em></strong>
-        </p>
-        <br><br>
-        <p>
-            this is still a work in progress and i don't really know where to go with this. i started this on a whim
-             - straight up buying a reasonably cheap domain and getting it up. and now here we are.
-        </p>
-        <br>
-        <p>
-            i mean i do have <em>some</em> plans for this. i've always wanted to have a blog, maybe this'll be it.
-        </p>
-        <br><br>
-        <p>
-            okay getting slightly technical now and writing this out so i actually do it and don't sleep on it :
-            <br>
-            this is made using a single html file and i plan to migrate it to <a href="http://gohugo.io" target="_blank">hugo</a> eventually
-        </p>
-        <br><br>
-        <p>
-            for a long time, i'd been mentioning this <a href="https://rajneel.notion.site/Favourite-Places-5d5846c8d9da4ccd9c6b1908175e1717?pvs=4" target="_blank">list</a> of favourite places,
-            and it didn't really exist. but now it does. so here is it, still under construction.
-            <br>
-            i might remove it from the public domain some day because i like gatekeeping good things *evil smirk*
-        </p>
+        <div id="footer">
+            not sleeping on this
+        </div>
     </center>
 </body>
 </html>
